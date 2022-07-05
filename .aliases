@@ -1,0 +1,7 @@
+alias compute='srun --partition=D4v3 --nodelist="slurm1-D4v3-pg0-[1-30]" --pty zsh -i'
+
+alias lsgb='ls -althr'
+
+alias his='history | grep '
+
+alias smon='watch '\''sinfo ; echo ----- ; squeue -u $USER -t configuring | head -n 10 ; echo "Configuring:" ; squeue -u $USER -t configuring | tail -n +2 | wc -l ; squeue -u $USER -t pending | head -n 10 ; echo "Pending:" ; squeue -u $USER -t pending | tail -n +2 | wc -l ; squeue -u $USER -t running | head -n 10 ; echo "Running:" ; squeue -u $USER -t running | tail -n +2 | wc -l ; echo "Total:" ; squeue -u $USER | tail -n +2 | wc -l'\'''
